@@ -3,18 +3,20 @@
 {% extends 'bootstrap/base.html' %}
 {% import "bootstrap/wtf.html" as wtf %}
 
+
+
+{% block title %}
+Hollywood's Best Actors
+{% endblock %}
+
+
+
 {% block content %}
 
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Hollywood's Top Actors </title>
-  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')  }}">
-</head>
-<body>
+
+<link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')  }}">
+
 
 <div id='title'>
 
@@ -41,10 +43,9 @@
 </div>
 
 <footer>
-<p> This Website was created by Cosimo Trotta. <a href="https://github.com/costrot123" target="_blank" rel="noopener noreferrer"> See my code on Github.</a></p>
+<p> This Website was created by Cosimo Trotta. <a href="https://github.com/costrot123/best_hollywood_actors" target="_blank" rel="noopener noreferrer"> See my code on Github.</a></p>
 </footer>
 
-</body>
-</html>
+
 
 {% endblock %}
