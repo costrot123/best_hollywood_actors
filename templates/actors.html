@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> {{ actor['name'] }} </title>
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')  }}">
+</head>
+<body>
+
+
+
+<h1> {{ actor['name'] }} </h1>
+<p id='home'><a href="{{ url_for('index') }}">Back to search page</a></p>
+
+<div id='container'>
+
+<div id='facts'>
+<p> <img class='icon' src="{{ url_for('static', filename='images/award.png')  }}" alt="small-icon"><b> Awards: </b> {{ actor['oscar'] }} </p>
+<p> <img class='icon' src="{{ url_for('static', filename='images/up.png')  }}" alt="small-icon"><b> Highest Ranked Movie:</b> {{ actor['highest'] }} </p>
+<p> <img class='icon' src="{{ url_for('static', filename='images/down.png')  }}" alt="small-icon"><b> Lowest Ranked Movie:</b> {{ actor['lowest'] }} </p>
+<p> <img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"><b> Birthdate:</b> {{ actor['birth'] }} </p>
+<p> <img class='icon' src="{{ url_for('static', filename='images/pin.png')  }}" alt="small-icon"><b> Birthplace:</b> {{ actor['place'] }} </p>
+</div>
+
+<h2> <span id='buble'>{{ actor['name'] }}'s Top 10 Movies</span> </h2>
+
+<p class='details'> <b>Click on any movie title to see or hide details!</b> </p>
+<p class='details' id='open'> <span id='here'><b>Or Click here view all!</b></span> </p>
+
+<div id='flex'>
+
+<!-- Table 1 -->
+<table>
+  <tr>
+    <th id='show1' colspan="2"> {{ actor['movie1_title'] }} </th>
+  </tr>
+  <tr class='banned1'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie1_tomato'] }} </td>
+  </tr>
+  <tr class='banned1'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie1_audience'] }} </td>
+  </tr>
+   <tr class='banned1'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie1_release'] }}</td>
+  </tr>
+ <tr class='banned1'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie1_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 2 -->
+<table>
+  <tr>
+    <th id='show2' colspan="2"> {{ actor['movie2_title'] }} </th>
+  </tr>
+  <tr class='banned2'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie2_tomato'] }} </td>
+  </tr>
+  <tr class='banned2'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie2_audience'] }} </td>
+  </tr>
+   <tr class='banned2'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie2_release'] }}</td>
+  </tr>
+ <tr class='banned2'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie2_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 3 -->
+<table>
+  <tr>
+    <th id='show3' colspan="2"> {{ actor['movie3_title'] }} </th>
+  </tr>
+  <tr class='banned3'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie3_tomato'] }} </td>
+  </tr>
+  <tr class='banned3'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie3_audience'] }} </td>
+  </tr>
+   <tr class='banned3'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie3_release'] }}</td>
+  </tr>
+ <tr class='banned3'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie3_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 4 -->
+<table>
+  <tr>
+    <th id='show4' colspan="2"> {{ actor['movie4_title'] }} </th>
+  </tr>
+  <tr class='banned4'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie4_tomato'] }} </td>
+  </tr>
+  <tr class='banned4'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie4_audience'] }} </td>
+  </tr>
+   <tr class='banned4'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie4_release'] }}</td>
+  </tr>
+ <tr class='banned4'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie4_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 5 -->
+<table>
+  <tr>
+    <th id='show5' colspan="2"> {{ actor['movie5_title'] }} </th>
+  </tr>
+  <tr class='banned5'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie5_tomato'] }} </td>
+  </tr>
+  <tr class='banned5'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon">Audience Score</td>
+    <td> {{ actor['movie5_audience'] }} </td>
+  </tr>
+   <tr class='banned5'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie5_release'] }}</td>
+  </tr>
+ <tr class='banned5'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie5_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 6 -->
+<table>
+  <tr>
+    <th id='show6' colspan="2"> {{ actor['movie6_title'] }} </th>
+  </tr>
+  <tr class='banned6'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie6_tomato'] }} </td>
+  </tr>
+  <tr class='banned6'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie6_audience'] }} </td>
+  </tr>
+   <tr class='banned6'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie6_release'] }}</td>
+  </tr>
+ <tr class='banned6'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie6_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 7 -->
+<table>
+  <tr>
+    <th id='show7' colspan="2"> {{ actor['movie7_title'] }} </th>
+  </tr>
+  <tr class='banned7'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie7_tomato'] }} </td>
+  </tr>
+  <tr class='banned7'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie7_audience'] }} </td>
+  </tr>
+   <tr class='banned7'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie7_release'] }}</td>
+  </tr>
+ <tr class='banned7'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie7_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 8 -->
+<table>
+  <tr>
+    <th id='show8' colspan="2"> {{ actor['movie8_title'] }} </th>
+  </tr>
+  <tr class='banned8'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie8_tomato'] }} </td>
+  </tr>
+  <tr class='banned8'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie8_audience'] }} </td>
+  </tr>
+   <tr class='banned8'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie8_release'] }}</td>
+  </tr>
+ <tr class='banned8'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie8_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 9 -->
+<table>
+  <tr>
+    <th id='show9' colspan="2"> {{ actor['movie9_title'] }} </th>
+  </tr>
+  <tr class='banned9'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie9_tomato'] }} </td>
+  </tr>
+  <tr class='banned9'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie9_audience'] }} </td>
+  </tr>
+   <tr class='banned9'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie9_release'] }}</td>
+  </tr>
+ <tr class='banned9'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie9_director'] }}</td>
+  </tr>
+</table>
+
+<!-- Table 10 -->
+<table>
+  <tr>
+    <th id='show10' colspan="2"> {{ actor['movie10_title'] }} </th>
+  </tr>
+  <tr class='banned10'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/tomato.png')  }}" alt="small-icon"> Tomato Meter</td>
+    <td> {{ actor['movie10_tomato'] }} </td>
+  </tr>
+  <tr class='banned10'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/pop.png')  }}" alt="small-icon"> Audience Score</td>
+    <td> {{ actor['movie10_audience'] }} </td>
+  </tr>
+   <tr class='banned10'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/date.png')  }}" alt="small-icon"> Release Date </td>
+    <td>{{ actor['movie10_release'] }}</td>
+  </tr>
+ <tr class='banned10'>
+    <td><img class='icon' src="{{ url_for('static', filename='images/director.png')  }}" alt="small-icon"> Director </td>
+    <td>{{ actor['movie10_director'] }}</td>
+  </tr>
+</table>
+
+</div>
+
+</div>
+<footer>
+
+<p> This Website was created by Cosimo Trotta. <a href="https://github.com/costrot123" target="_blank" rel="noopener noreferrer"> See my code on Github.</a></p>
+<p> All images used under <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank" rel="noopener noreferrer">Creative Commons 3.0 license.</a> </p>
+<p> Full image attribution list <a href="https://drive.google.com/file/d/1wkOx_Uyf_OaMTrLlsi1J0U30gLDhq8Qv/view?usp=sharing" target="_blank" rel="noopener noreferrer">can be viewed here.</a>
+
+
+</footer>
+<script src="../static/js/jquery-3.3.1.min.js"></script>
+<script src="../static/js/main.js"></script>
+
+</body>
+</html>

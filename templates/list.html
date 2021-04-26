@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Full Actor List </title>
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/list.css')  }}">
+</head>
+<body>
+
+
+
+  <h1> Full Actor List </h1>
+
+<div id='main'>
+
+
+
+  <p id='home'><a href="{{ url_for('index') }}">Back to search page</a></p>
+
+<p id='info'> Click on any link to view the actor! </p>
+
+  <ul>
+  {% for item in list %}
+      <li><a href="{{ url_for( 'actor', num=item['id'] ) }}">{{ item['name'] }}</a></li>
+  {% endfor %}
+  </ul>
+
+
+
+</div>
+
+
+<footer>
+<p> This Website was created by Cosimo Trotta. <a href="https://github.com/costrot123" target="_blank" rel="noopener noreferrer"> See my code on Github.</a></p>
+</footer>
+
+</body>
+</html>

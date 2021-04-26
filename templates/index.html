@@ -1,0 +1,50 @@
+
+
+{% extends 'bootstrap/base.html' %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Hollywood's Top Actors </title>
+  <link href="https://fonts.googleapis.com/css2?family=Monofett&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css')  }}">
+</head>
+<body>
+
+<div id='title'>
+
+<h1>Hollywood's Top 300 Actors </h1>
+
+</div>
+
+<div id='main'>
+
+<p class='desc'> Search the database for one of Hollywood’s top 300 actors or <a href="{{ url_for('list') }}">click this link to view the full ordered list</a> of Hollywood’s best actors.
+   Once you have searched for an actor you will find information regarding their awards, birthdate, birthplace and top 10 filmography (if available).
+</p>
+
+<p id='bottom' class='desc'> The order, names and awards contained in this database are sourced from IMDb.
+   The actor’s birthdate, birthplace, and all information about filmography is sourced from Rotten Tomatoes.
+</p>
+
+{{ wtf.quick_form(form) }}
+
+ <p><strong>{{ message }}</strong></p>
+
+<p id='home'><a href="{{ url_for('list') }}">View Full Actor Database</a></p>
+
+</div>
+
+<footer>
+<p> This Website was created by Cosimo Trotta. <a href="https://github.com/costrot123" target="_blank" rel="noopener noreferrer"> See my code on Github.</a></p>
+</footer>
+
+</body>
+</html>
+
+{% endblock %}
