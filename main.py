@@ -9,8 +9,8 @@ app = Flask(__name__)
 application = app
 
 
-# Flask-WTF requires an encryption key - the key was changed in this repo for secuirity purposes
-app.config['SECRET_KEY'] = 'Grt8y3Ve09TBRFbTP6jJ2D1NL0QDONRI'
+# Flask-WTF requires an encryption key - the string can be anything
+app.config['SECRET_KEY'] = 'C2HWGVoMGfNTBsrYQg8EcMrdTimkZfAb'
 
 # Flask-Bootstrap requires this line
 Bootstrap(app)
@@ -30,7 +30,7 @@ actor_list = convert_to_dict('scrape_final.csv')
 def get_names(source):
     names = []
     for row in source:
-        # lowercase all the names for search feature
+        # lowercase all the names for better searching
         name = row["name"].lower()
         names.append(name)
     return sorted(names)
@@ -40,7 +40,7 @@ def get_id(source, name):
         if name.lower() == row["name"].lower():
             id = row["id"]
             id = str(id)
-            # return id 
+            # return id if name is valid
             return id
 
     return "Unknown"
