@@ -23,8 +23,9 @@ All of the data was then written into a CSV file. Each CSV row contains one acto
 The method I used to turn an actor's name into a Rotten Tomatoes url worked well but it was not fool-proof. Certain actors that had special characters in their name could not be successfully turned  into Rotten Tomatoes link and therefore could not be loaded by selenium automatically.
 All the failed link were collected in a list to be fixed and run again.
 
-The file 'scrape_bot2' is almost an exact copy of 'scrape_bot1'. The only difference is that in 'scrape_bot2' the Rotten Tomatoes urls for the failed actors were manually provided in a list instead of being automatically generated using the collected actor names. This was was run to collect the remaining actor data that could not be previously recorded.
+The file 'scrape_bot2' is almost an exact copy of 'scrape_bot1'. The only difference is that in 'scrape_bot2' the Rotten Tomatoes urls for the failed actors were manually provided in a list instead of being automatically generated using the collected actor names. This was was run to collect the remaining actor data that could not be previously recorded. Data from both scrape_bot1 and scrape_bot2 were combined in excel into one large CSV file.
+If data was not available for a certain item, such as the director of a movie, "Not available" was written into the cell. 
 
 ## How it was built (App)
 
-The web app was built using Flask. A total of three templates were used for three different webpages. A python function is used to turn the CSV file into a dictionary. That dictionary data is then used to feed the template. Bootstrap and wtforms were used for the search field on the home page. 
+The web app was built using Flask. A total of three templates were used for three different webpages. A python function is used to turn the CSV file into a dictionary. That dictionary data is then used to feed the template. Bootstrap and wtforms were used for the search field on the home page.
